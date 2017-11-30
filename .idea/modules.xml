@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://I://pythonFullStack/../../python全栈学习/.idea/pythonFullStack.iml" filepath="I://pythonFullStack/../../python全栈学习/.idea/pythonFullStack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pythonFullStack.iml" filepath="$PROJECT_DIR$/.idea/pythonFullStack.iml" />
     </modules>
   </component>
 </project>
