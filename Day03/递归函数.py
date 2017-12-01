@@ -1,32 +1,42 @@
 #!/user/bin/env python
-# DATE : 2017/11/30 0030
-__author__ = 'Howie'
+# __author__ = 'Howie'
+# date : 2017/11/30
 
 
-# 使用普通函数
 # def f(n):
-#     z = 1
-#     while n > 0:
-#         z *= n
-#         n -= 1
-#     return z
-#
-#
-# print(f(5))
+#     if n == 1:
+#         return 1
+#     return n * f(n-1)
 
 
-# 使用递归函数
+# 斐波那契数列，又称黄金分割数列，指的是这样一个数列：0、1、1、2、3、5、8、13、21、34
+# 0、1、(0+1) (0+1)+1 (0+1)+(0+1)+1
+#用递归的话思路分成简单清晰
 
 
-def recursive(n):
+def fibo(n):
     if n == 1:
+        return 0
+    elif n == 2:
         return 1
-    return n * recursive(n - 1)  # 其实就是 5*4*3*2*recursive(1) 改变的只是不断从return传回去的参数
+    return fibo(n - 1) + fibo(n - 2)
 
 
-print(recursive(5))
-'''
-这里有两要点
-1.函数调用自己
-2.什么时候结束，结束的时候return什么
-'''
+print(fibo(6))
+
+
+#循环
+
+def fibo1(n):
+    before = 0
+    after = 1
+    for i in range(n-2):
+        ret = before + after
+        before = after
+        after = ret
+    return ret
+
+
+print(fibo1(6))
+
+
